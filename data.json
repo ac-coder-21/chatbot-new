@@ -1,0 +1,36 @@
+{
+    "data": [
+        {
+            "tag": "greeting",
+            "input": [
+                "Hi",
+                "Hello",
+                "Hola",
+                "How are you",
+                "Is there anyone",
+                "Hellew",
+                "Good day"
+            ],
+            "output": [
+                "Hellooooo",
+                "Welcome to LTCE Site",
+                "Hello, How can I help you today?",
+                "I am here:)"
+            ]
+        },
+        {
+            "tag": "farewell",
+            "input":[
+                "Bye",
+                "Farewell",
+                "Thank You",
+                "Thanks for your help"
+            ],
+            "output":[
+                "Welcome",
+                "Bye, Have a nice day",
+                "We are happy to help you:)"
+            ]
+        }
+    ]
+}
