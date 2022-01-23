@@ -80,10 +80,15 @@ for epoch in range(num_epochs):
         words = words.to(device)
         labels = labels.to(device)
         outputs = model(words)
-        #loss = criterion(outputs, labels)
+        labels = labels.type(torch.LongTensor)
+        loss = criterion(outputs, labels)
         optimiser.zero_grad()
-        #loss.backward()
+        loss.backward()
         optimiser.step()
+    
+    if (epoch + 1) % 100 == 0:
+        print(f'epoch {epoch+1}/{num_epochs}, loss={loss.item():.4f}')
+    print(f'final loss, loss={loss.item():.4f}')
     
 data = {
         "model_state": model.state_dict(),
