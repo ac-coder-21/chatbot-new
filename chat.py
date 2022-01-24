@@ -28,16 +28,20 @@ model = NeuralNet(input_size, hidden_size, output_size).to(device)
 model.load_state_dict(model_state)
 model.eval()
 
-bot_name = "LTCE-BOT"
+bot_name = "BOT"
+"""
 print("I am here to help you")
 while True:
     sentence = input("You: ")
     if sentence == "quit":
         break
-    sentence = tokenize(sentence)
+"""
+    
+def get_response(msg):
+    sentence = tokenize(msg)
     word = bag_of_words(sentence, all_words)
     word = word.reshape(1, word.shape[0])
-    word = torch.from_numpy(word)
+    word = torch.from_numpy(word).to(device)
     output = model(word)
     _, predicted = torch.max(output, dim=1)
     tag = tags[predicted.item()]
@@ -48,6 +52,16 @@ while True:
     if prob.item() > 0.75:
         for d in data_json["data"]:
             if tag ==d["tag"]:
-                print(f"{bot_name}: {random.choice(d['output'])}")
+                return f"{random.choice(d['output'])}"
     else:
-        print(f"{bot_name}: I do not understand...")
+        return f" I do not understand..."
+
+if __name__ == "__main__":
+    print("Let's chat! (type 'quit' to exit)")
+    while True:
+        sentence = input("You: ")
+        if sentence == "quit":
+            break
+        resp = get_response(sentence)
+        print(resp)
+    
