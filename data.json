@@ -43,6 +43,18 @@
             "output":[
                 "M4: 9:30-10:30, Python: 10:30-11:30, Micro-processor: 11:30-12:30, Break: 12:30-:1:00, AOA: 1:00-2:00"
             ]
+        },
+        {
+            "tag": "tuesday-tt-sem4",
+            "input":[
+                "tuesday's timetable",
+                "tuesday tt",
+                "What is timetable for lecture on tuesday?",
+                "tuesday's lecture timing?"
+            ],
+            "output":[
+                "tueday tt"
+            ]
         }
     ]
 }

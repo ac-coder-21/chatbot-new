@@ -4,7 +4,8 @@ Created on Sat Jan 22 20:02:10 2022
 
 @author: auuch
 """
-
+import nltk
+nltk.download('punkt')
 
 from data_learning import tokenize, stem, bag_of_words
 from model import NeuralNet
