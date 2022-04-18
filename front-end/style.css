@@ -56,7 +56,8 @@ body {
     text-align: right;
 }
 
-.send__button {
+.send__button,
+.mic__button {
     padding: 6px;
     background: transparent;
     border: none;
@@ -79,6 +80,7 @@ body {
     overflow-y: scroll;
     flex-direction: column-reverse;
 }
+
 
 .messages__item {
     background: orange;
@@ -162,7 +164,6 @@ body {
     background: var(--primary);
     color: white;
 }
-
 
 .chatbox__footer {
     display: flex;

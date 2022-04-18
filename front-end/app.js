@@ -3,7 +3,8 @@ class Chatbox {
         this.args = {
             openButton: document.querySelector('.chatbox__button'),
             chatBox: document.querySelector('.chatbox__support'),
-            sendButton: document.querySelector('.send__button')
+            sendButton: document.querySelector('.send__button'),
+            micButton: document.querySelector('.mic__button'),
         }
 
         this.state = false;
@@ -11,11 +12,13 @@ class Chatbox {
     }
 
     display() {
-        const {openButton, chatBox, sendButton} = this.args;
+        const {openButton, chatBox, sendButton, micButton} = this.args;
 
         openButton.addEventListener('click', () => this.toggleState(chatBox))
 
         sendButton.addEventListener('click', () => this.onSendButton(chatBox))
+
+        micButton.addEventListener('click', () => this.onSpeechtoText(chatBox))
 
         const node = chatBox.querySelector('input');
         node.addEventListener("keyup", ({key}) => {
@@ -34,6 +37,41 @@ class Chatbox {
         }
     }
 
+    onSpeechtoText(chatbox) {
+        var SpeechRecognition = SpeechRecognition || webkitSpeechRecognition;
+        var SpeechGrammarList = SpeechGrammarList || webkitSpeechGrammarList;
+        var SpeechRecognitionEvent =
+          SpeechRecognitionEvent || webkitSpeechRecognitionEvent;
+           var grammar =""
+  
+        var recognition = new SpeechRecognition();
+        var speechRecognitionList = new SpeechGrammarList();
+        speechRecognitionList.addFromString(grammar, 1);
+        recognition.grammars = speechRecognitionList;
+        recognition.continuous = false;
+        recognition.lang = "en-US";
+        recognition.interimResults = false;
+        recognition.maxAlternatives = 1;
+  
+           recognition.start();
+          console.log("Ready to receive a color command.");
+  
+        recognition.onresult = function (event) {
+        var textField = chatbox.querySelector('input');
+  
+          console.log(event.results[0][0].transcript);
+          var color = event.results[0][0].transcript;
+          textField.value += color;
+          diagnostic.textContent = "Result received: " + color + ".";   
+          bg.style.backgroundColor = color;
+          console.log("Confidence: " + event.results[0][0].confidence);
+        };
+  
+        recognition.onspeechend = function () {
+          recognition.stop();
+        };
+    }
+
     onSendButton(chatbox) {
         var textField = chatbox.querySelector('input');
         let text1 = textField.value
@@ -44,7 +82,7 @@ class Chatbox {
         let msg1 = { name: "User", message: text1 }
         this.messages.push(msg1);
 
-        fetch('http://127.0.0.1:5000/predict', {
+       fetch('http://127.0.0.1:5000/predict', {
             method: 'POST',
             body: JSON.stringify({ message: text1 }),
             mode: 'cors',
@@ -63,7 +101,7 @@ class Chatbox {
             console.error('Error:', error);
             this.updateChatText(chatbox)
             textField.value = ''
-          });
+          }).catch((error) => {console.log(error)});
     }
 
     updateChatText(chatbox) {
