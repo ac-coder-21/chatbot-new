@@ -5,20 +5,21 @@ class Chatbox {
             chatBox: document.querySelector('.chatbox__support'),
             sendButton: document.querySelector('.send__button'),
             micButton: document.querySelector('.mic__button'),
+            addressButton: document.querySelector('.chat_opt_address'),
+            phonenoButton: document.querySelector('.chat_opt_phoneno'),
         }
-
         this.state = false;
         this.messages = [];
     }
 
     display() {
-        const {openButton, chatBox, sendButton, micButton} = this.args;
+        const {openButton, chatBox, sendButton, micButton, addressButton, phonenoButton} = this.args;
 
         openButton.addEventListener('click', () => this.toggleState(chatBox))
-
         sendButton.addEventListener('click', () => this.onSendButton(chatBox))
-
         micButton.addEventListener('click', () => this.onSpeechtoText(chatBox))
+        addressButton.addEventListener('click', () => this.addressChat(chatBox))
+        phonenoButton.addEventListener('click', () => this.phoneChat(chatBox))
 
         const node = chatBox.querySelector('input');
         node.addEventListener("keyup", ({key}) => {
@@ -27,6 +28,22 @@ class Chatbox {
             }
         })
     }
+
+    addressChat(chatbox){
+        let address = { name: "BOT", message: "Vikas Nagar, Gyan Vikas Road, Sector 4, Kopar Khairane, Navi Mumbai, Maharashtra 400709" };
+        this.messages.push(address);
+        this.updateChatText(chatbox)
+        textField.value = ''
+    }
+
+    phoneChat(chatbox){
+        let phone = { name: "BOT", message: "022 2754 1005" };
+        this.messages.push(phone);
+        this.updateChatText(chatbox)
+        textField.value = ''
+    }
+
+
 
     toggleState(chatbox) {
         this.state = !this.state;
@@ -54,8 +71,7 @@ class Chatbox {
         recognition.maxAlternatives = 1;
   
            recognition.start();
-          console.log("Ready to receive a color command.");
-  
+
         recognition.onresult = function (event) {
         var textField = chatbox.querySelector('input');
   
@@ -64,7 +80,6 @@ class Chatbox {
           textField.value += color;
           diagnostic.textContent = "Result received: " + color + ".";   
           bg.style.backgroundColor = color;
-          console.log("Confidence: " + event.results[0][0].confidence);
         };
   
         recognition.onspeechend = function () {
