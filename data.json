@@ -33,27 +33,359 @@
             ]
         },
         {
-            "tag": "monday-tt-sem4",
-            "input":[
-                "Monday's timetable",
+            "tag": "only-tt",
+            "input": [
+                "Time table for monday",
                 "Monday tt",
-                "What is timetable for lecture on monday?",
-                "Monday's lecture timing?"
+                "What is time table for monday?",
+                "What is monday tt?",
+                "Time table for tuesday",
+                "Tuesday tt",
+                "What is time table for tuesday?",
+                "What is tuesday tt?",
+                "Time table for wednesday",
+                "Wednesday tt",
+                "What is timetable for Wednesday?",
+                "What is wednesday tt?",
+                "Time table for thursday",
+                "Thursday tt",
+                "What is timetable for thursday?",
+                "What is thursday tt?",
+                "Time table for friday",
+                "Friday tt",
+                "What is timetable for friday?",
+                "What is friday tt?"
             ],
-            "output":[
-                "M4: 9:30-10:30, Python: 10:30-11:30, Micro-processor: 11:30-12:30, Break: 12:30-:1:00, AOA: 1:00-2:00"
+            "output": [
+                "Please specify branch name and Division"
             ]
         },
         {
-            "tag": "tuesday-tt-sem4",
+            "tag": "monday-tt-computer-a",
             "input":[
-                "tuesday's timetable",
-                "tuesday tt",
-                "What is timetable for lecture on tuesday?",
-                "tuesday's lecture timing?"
+                "Monday's timetable for computer A",
+                "Monday tt for computer A",
+                "What is timetable for lecture on monday for computer A?",
+                "Monday's lecture timing for computer branch division A?"
             ],
             "output":[
-                "tueday tt"
+                "MP: 9:30, Python: 10:30, EM-4: 11:30, AOA: 1:00, MP-Lab(A1), Python-Lab(A3), DBMS-L(A2): 2:15"
+            ]
+        },
+        {
+            "tag": "tuesday-tt-computer-a",
+            "input":[
+                "Tuesday's timetable for computer A",
+                "Tuesday tt for computer A",
+                "What is timetable for lecture on tuesday for computer A?",
+                "tuesday's lecture timing for computer branch division A?"
+            ],
+            "output":[
+                "OS: 9:30, DBMS: 10:30, AOA: 11:30, EM-4: 1:00, MP-Lab(A3), Python-Lab(A2), DBMS-L(A1): 2:15"
+            ]
+        },
+        {
+            "tag": "wednesday-tt-computer-a",
+            "input":[
+                "Wednesday's timetable for computer A",
+                "Wednesday tt for computer A",
+                "What is timetable for lecture on wednesday for computer A?",
+                "Wednesday's lecture timing for computer branch division A?"
+            ],
+            "output":[
+                "Python: 9:30, AOA: 10:30, DBMS: 11:30, EM-4: 1:00, MP-Lab(A2), OS-Lab(A3), AOA-L(A1): 2:15"
+            ]
+        },
+        {
+            "tag": "thursday-tt-computer-a",
+            "input":[
+                "Thursday's timetable for computer A",
+                "Thursday tt for computer A",
+                "What is timetable for lecture on thursday for computer A?",
+                "Thursday's lecture timing for computer branch division A?"
+            ],
+            "output":[
+                "DBMS-Lab(A3), OS-Lab(A1), AOA-L(A2): 9:30, MP: 11:30, DBMS: 1:00, OS: 2:15, EM-IV Tutorial(A1): 3:15"
+            ]
+        },
+        {
+            "tag": "friday-tt-computer-a",
+            "input":[
+                "Friday's timetable for computer A",
+                "Friday tt for computer A",
+                "What is timetable for lecture on friday for computer A?",
+                "Friday's lecture timing for computer branch division A?"
+            ],
+            "output":[
+                "EM-IV Tutorial(A2): 9:30, AOA-Lab(A3), Python-Lab(A1), OS-L(A2): 10:30, OS: 1:00, MP: 2:15, EM-IV Tutorial(A3): 3:15"
+            ]
+        },
+        {
+            "tag": "monday-tt-computer-b",
+            "input":[
+                "Monday's timetable for computer B",
+                "Monday tt for computer B",
+                "What is timetable for lecture on monday for computer B?",
+                "Monday's lecture timing for computer branch division B?"
+            ],
+            "output":[
+                "EM-IV Tutorial(B1): 9:30, OS: 10:30 ,EM-4: 11:30, AOA: 1:00, DBMS-Lab(B2), OS-Lab(B1), OS-Lab(B3): 2:15"
+            ]
+        },
+        {
+            "tag": "tuesday-tt-computer-b",
+            "input":[
+                "Tuesday's timetable for computer B",
+                "Tuesday tt for computer B",
+                "What is timetable for lecture on tuesday for computer B?",
+                "Tuesday's lecture timing for computer branch division B?"
+            ],
+            "output":[
+                "DBMS: 9:30, EM-4: 10:30 ,MP: 11:30, OS: 1:00, MP-Lab(B2), Python-Lab(B1), AOA-Lab(B3): 2:15"
+            ]
+        },
+        {
+            "tag": "wednesday-tt-computer-b",
+            "input":[
+                "Wednesday's timetable for computer B",
+                "Wednesday tt for computer B",
+                "What is timetable for lecture on wednesday for computer B?",
+                "Wednesday's lecture timing for computer branch division B?"
+            ],
+            "output":[
+                "AOA: 9:30, DBMS-Lab(B1), Python-Lab(B3), AOA-Lab(B2): 10:30, MP: 1:00, Python: 2:15, EM-IV Tutorial(B3): 3:15"
+            ]
+        },
+        {
+            "tag": "thursday-tt-computer-b",
+            "input":[
+                "Thursday's timetable for computer B",
+                "Thursday tt for computer B",
+                "What is timetable for lecture on thursday for computer B?",
+                "Thursday's lecture timing for computer branch division B?"
+            ],
+            "output":[
+                "EM-IV Tutorial(B2): 9:30, DBMS: 10:30, EM-4: 11:30, AOA: 1:00,  Python-Lab(B2), AOA-Lab(B1), MP-Lab(B3): 2:15: 2:15"
+            ]
+        },
+        {
+            "tag": "friday-tt-computer-b",
+            "input":[
+                "Friday's time table for computer B",
+                "Friday tt for computer B",
+                "What is timetable for lecture on friday for computer B?",
+                "Friday's lecture timing for computer branch division B?"
+            ],
+            "output":[
+                "OS: 9:30, MP: 10:30, Python: 11:30, DBMS: 1:00,  OS-Lab(B2), MP-Lab(B1), DBMS-Lab(B3): 2:15"
+            ]
+        },
+        {
+            "tag": "monday-tt-iot",
+            "input":[
+                "Monday's time table for IOT",
+                "Monday tt for IOT",
+                "What is time table for lecture on monday for IOT?",
+                "Monday's lecture timing for IOT?",
+                "Monday's time table for Internet Of Things",
+                "Monday tt for Internet Of Things",
+                "What is time table for lecture on monday for Internet Of Things?",
+                "Monday's lecture timing for Internet Of Things?"
+            ],
+            "output":[
+                "MP: 9:30, OS: 10:30, DBMS: 11:30, Python: 1:00,  MP-Lab(1), DBMS-Lab(2), EM-4-Tutorial(3): 2:00"
+            ]
+        },
+        {
+            "tag": "tuesday-tt-iot",
+            "input":[
+                "Tuesday's time table for IOT",
+                "Tuesday tt for IOT",
+                "What is time table for lecture on tuesday for IOT?",
+                "Tuesday's lecture timing for IOT?",
+                "Tuesday's time table for Internet Of Things",
+                "Tuesday tt for Internet Of Things",
+                "What is time table for lecture on tuesday for Internet Of Things?",
+                "Tuesday's lecture timing for Internet Of Things?"
+            ],
+            "output":[
+                "DBMS: 9:30, EM-4: 10:30, MP: 11:30, AOA: 1:00,  DBMS-Lab(1), EM-4-Tutorial(2), OS-Lab(3): 2:00"
+            ]
+        },
+        {
+            "tag": "wednesday-tt-iot",
+            "input":[
+                "Wednesday's time table for IOT",
+                "Wednesday tt for IOT",
+                "What is time table for lecture on wednesday for IOT?",
+                "Wednesday's lecture timing for IOT?",
+                "Wednesday's time table for Internet Of Things",
+                "Wednesday tt for Internet Of Things",
+                "What is time table for lecture on wednesday for Internet Of Things?",
+                "Wednesday's lecture timing for Internet Of Things?"
+            ],
+            "output":[
+                "EM4: 9:30, AOA: 10:30, Python: 11:30, AOA-Lab(1), Mp-Lab(2), DBMS-Lab(3): 1:00, Mini-Project: 3:00"
+            ]
+        },
+        {
+            "tag": "thursday-tt-iot",
+            "input":[
+                "Thursday's time table for IOT",
+                "Thursday tt for IOT",
+                "What is time table for lecture on thursday for IOT?",
+                "Thursday's lecture timing for IOT?",
+                "Thursday's time table for Internet Of Things",
+                "Thursday tt for Internet Of Things",
+                "What is time table for lecture on thursday for Internet Of Things?",
+                "Thursday's lecture timing for Internet Of Things?"
+            ],
+            "output":[
+                "AOA: 9:30, DBMS: 10:30, OS: 11:30, OS-Lab(1), AOA-Lab(2), Python-Lab(3): 1:00, Mini-Project: 3:00"
+            ]
+        },
+        {
+            "tag": "friday-tt-iot",
+            "input":[
+                "Friday's time table for IOT",
+                "Friday tt for IOT",
+                "What is time table for lecture on friday for IOT?",
+                "Friday's lecture timing for IOT?",
+                "Friday's time table for Internet Of Things",
+                "Friday tt for Internet Of Things",
+                "What is time table for lecture on friday for Internet Of Things?",
+                "Friday's lecture timing for Internet Of Things?"
+            ],
+            "output":[
+                "OS: 9:00, EM-4: 10:00, MP: 11:00, Python-Lab(1), OS-Labl(2), AOA-Lab(3): 1:00,  EM-4-Tutorial(1), Python-Lab(2), MP-Lab(3): 3:00"
+            ]
+        },
+        {
+            "tag": "monday-tt-ds",
+            "input":[
+                "Monday's time table for DS",
+                "Monday tt for DS",
+                "What is time table for lecture on monday for DS?",
+                "Monday's lecture timing for DS?",
+                "Monday's time table for Data Science",
+                "Monday tt for Data Science",
+                "What is time table for lecture on monday for Data Science?",
+                "Monday's lecture timing for Data Science?"
+            ],
+            "output":[
+                "AOA: 9:30, EM-4: 10:30, MP: 11:30, AOA-Lab(A1), DBMS-Lab(A2), OS-Lab(A3): 1:00"
+            ]
+        },
+        {
+            "tag": "tuesday-tt-ds",
+            "input":[
+                "Tuesday's time table for DS",
+                "Monday tt for DS",
+                "What is time table for lecture on monday for DS?",
+                "Monday's lecture timing for DS?",
+                "Monday's time table for Data Science",
+                "Monday tt for Data Science",
+                "What is time table for lecture on monday for Data Science?",
+                "Monday's lecture timing for Data Science?"
+            ],
+            "output":[
+                "OS: 9:30, AOA: 10:30, DBMS: 11:30, OS-Lab(A1), AOA-Lab(A2), DBMS-Lab(A3): 1:00"
+            ]
+        },
+        {
+            "tag": "wednesday-tt-ds",
+            "input":[
+                "Wednesday's time table for DS",
+                "Wednesday tt for DS",
+                "What is time table for lecture on wednesday for DS?",
+                "Wednesday's lecture timing for DS?",
+                "Wednesday's time table for Data Science",
+                "Wednesday tt for Data Science",
+                "What is time table for lecture on wednesday for Data Science?",
+                "Wednesday's lecture timing for Data Science?"
+            ],
+            "output":[
+                "DBMS: 9:30, OS: 10:30, MP: 11:30, DBMS-Lab(A1), OS-Lab(A2), AOA-Lab(A3): 1:00"
+            ]
+        },
+        {
+            "tag": "monday-tt-aiml",
+            "input":[
+                "Monday's time table for AIML",
+                "Monday tt for AIML",
+                "What is time table for lecture on monday for AIML?",
+                "Monday's lecture timing for AIML?",
+                "Monday's time table for Aritfical Intelligence & Machine Learning",
+                "Monday tt for Aritfical Intelligence & Machine Learning",
+                "What is time table for lecture on monday for Aritfical Intelligence & Machine Learning?",
+                "Monday's lecture timing for Aritfical Intelligence & Machine Learning?"
+            ],
+            "output":[
+                "EM-4: 9:30, MP: 10:30, OS: 11:30, DBMS: 1:00, MP-Lab(B1), DBMS-Lab(B2), Python-Lab(B3): 2:00"
+            ]
+        },
+        {
+            "tag": "tuesday-tt-aiml",
+            "input":[
+                "Tuesday's time table for AIML",
+                "Tuesday tt for AIML",
+                "What is time table for lecture on tuesday for AIML?",
+                "Tuesday's lecture timing for AIML?",
+                "Tuesday's time table for Aritfical Intelligence & Machine Learning",
+                "Tuesday tt for Aritfical Intelligence & Machine Learning",
+                "What is time table for lecture on tuesday for Aritfical Intelligence & Machine Learning?",
+                "Tuesday's lecture timing for Aritfical Intelligence & Machine Learning?"
+            ],
+            "output":[
+                "EM-4-Tutorial(B1): 9:30, DBMS: 10:30, OS: 11:30, Python: 1:00, OS-Lab(B1), Python-Lab(B2), AOA-Lab(B3): 2:00"
+            ]
+        },
+        {
+            "tag": "wednesday-tt-aiml",
+            "input":[
+                "Wednesday's time table for AIML",
+                "Wednesday tt for AIML",
+                "What is time table for lecture on wednesday` for AIML?",
+                "Wednesday's lecture timing for AIML?",
+                "Wednesday's time table for Aritfical Intelligence & Machine Learning",
+                "Wednesday tt for Aritfical Intelligence & Machine Learning",
+                "What is time table for lecture on wednesday for Aritfical Intelligence & Machine Learning?",
+                "Wednesday's lecture timing for Aritfical Intelligence & Machine Learning?"
+            ],
+            "output":[
+                "EM-4-Tutorial(B2): 9:30, AOA: 10:30, MP: 11:30, EM-4: 1:00, AOA-Lab(B1), OS-Lab(B2), DBMS-Lab(B3): 2:00"
+            ]
+        },
+        {
+            "tag": "thursday-tt-aiml",
+            "input":[
+                "Thursday's time table for AIML",
+                "Thursday tt for AIML",
+                "What is time table for lecture on thursday` for AIML?",
+                "Thursday's lecture timing for AIML?",
+                "Thursday's time table for Aritfical Intelligence & Machine Learning",
+                "Thursday tt for Aritfical Intelligence & Machine Learning",
+                "What is time table for lecture on thursday for Aritfical Intelligence & Machine Learning?",
+                "Thursday's lecture timing for Aritfical Intelligence & Machine Learning?"
+            ],
+            "output":[
+                "MP: 9:30, DBMS: 10:30, AOA: 11:30, OS: 1:00, Python-Lab(B1), AOA-Lab(B2), MP-Lab(B3): 2:00"
+            ]
+        },
+        {
+            "tag": "friday-tt-aiml",
+            "input":[
+                "Friday's time table for AIML",
+                "Friday tt for AIML",
+                "What is time table for lecture on friday for AIML?",
+                "Friday's lecture timing for AIML?",
+                "Friday's time table for Aritfical Intelligence & Machine Learning",
+                "Friday tt for Aritfical Intelligence & Machine Learning",
+                "What is time table for lecture on friday for Aritfical Intelligence & Machine Learning?",
+                "Friday's lecture timing for Aritfical Intelligence & Machine Learning?"
+            ],
+            "output":[
+                "Python: 9:30, EM-4: 10:30, AOA: 11:30, EM-4-Tutorial(B3): 1:00, DBMS-Lab(B1), MP-Lab(B2), OS-Lab(B3): 2:00"
             ]
         }
     ]
