@@ -30,14 +30,14 @@ class Chatbox {
     }
 
     addressChat(chatbox){
-        let address = { name: "BOT", message: "Vikas Nagar, Gyan Vikas Road, Sector 4, Kopar Khairane, Navi Mumbai, Maharashtra 400709" };
+        let address = { name: "BOT", message: "The college is virtual , you may find it on internet" };
         this.messages.push(address);
         this.updateChatText(chatbox)
         textField.value = ''
     }
 
     phoneChat(chatbox){
-        let phone = { name: "BOT", message: "022 2754 1005" };
+        let phone = { name: "BOT", message: "567654567654" };
         this.messages.push(phone);
         this.updateChatText(chatbox)
         textField.value = ''
